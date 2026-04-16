@@ -23,7 +23,7 @@ class JobListScreen extends ConsumerWidget {
           color: AppColors.textPrimary,
           onPressed: () => context.pop(),
         ),
-        title: const Text('All jobs', style: AppTextStyles.heading2),
+        title: Text('All jobs', style: AppTextStyles.heading2),
       ),
       body: SafeArea(
         child: Center(

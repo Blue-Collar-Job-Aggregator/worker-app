@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 import 'radius.dart';
 import 'text_styles.dart';
+
+export 'colors.dart';
+export 'radius.dart';
+export 'shadows.dart';
+export 'spacing.dart';
+export 'text_styles.dart';
 
 ThemeData buildAppTheme() {
   final colorScheme = ColorScheme.fromSeed(
@@ -17,14 +24,14 @@ ThemeData buildAppTheme() {
     useMaterial3: true,
     colorScheme: colorScheme,
     scaffoldBackgroundColor: AppColors.background,
-    textTheme: const TextTheme(
+    textTheme: GoogleFonts.interTextTheme().copyWith(
       headlineSmall: AppTextStyles.heading1,
       titleLarge: AppTextStyles.heading2,
       bodyLarge: AppTextStyles.body,
       bodyMedium: AppTextStyles.caption,
       labelSmall: AppTextStyles.small,
     ),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       elevation: 0,
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
@@ -66,6 +73,17 @@ ThemeData buildAppTheme() {
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         elevation: 0,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppRadius.md),
+        ),
+        textStyle: AppTextStyles.bodyStrong,
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: AppColors.primary,
+        side: const BorderSide(color: AppColors.border, width: 1.5),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppRadius.md),

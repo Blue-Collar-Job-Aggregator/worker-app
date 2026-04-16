@@ -78,9 +78,9 @@ class _RegionScreenState extends ConsumerState<RegionScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: AppSpacing.sm),
-              const Text('Choose your city', style: AppTextStyles.heading1),
+              Text('Choose your city', style: AppTextStyles.heading1),
               const SizedBox(height: AppSpacing.sm),
-              const Text(
+              Text(
                 'We only operate in select regions right now.',
                 style: AppTextStyles.caption,
               ),

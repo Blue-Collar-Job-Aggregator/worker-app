@@ -73,7 +73,7 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: AppSpacing.sm),
-              const Text('Verify your number', style: AppTextStyles.heading1),
+              Text('Verify your number', style: AppTextStyles.heading1),
               const SizedBox(height: AppSpacing.sm),
               Text.rich(
                 TextSpan(

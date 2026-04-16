@@ -27,7 +27,7 @@ class JobDetailScreen extends ConsumerWidget {
           color: AppColors.textPrimary,
           onPressed: () => context.pop(),
         ),
-        title: const Text('Job details', style: AppTextStyles.heading2),
+        title: Text('Job details', style: AppTextStyles.heading2),
       ),
       body: job == null ? const _NotFound() : _JobDetailBody(job: job!),
     );
@@ -39,9 +39,9 @@ class _NotFound extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Padding(
-        padding: EdgeInsets.all(AppSpacing.lg),
+        padding: const EdgeInsets.all(AppSpacing.lg),
         child: Text(
           "We couldn't load that job. Please go back and try again.",
           style: AppTextStyles.caption,
@@ -101,7 +101,7 @@ class _JobDetailBody extends ConsumerWidget {
                         value: job.salary,
                       ),
                       const SizedBox(height: AppSpacing.lg),
-                      const Text(
+                      Text(
                         'About the job',
                         style: AppTextStyles.bodyStrong,
                       ),
