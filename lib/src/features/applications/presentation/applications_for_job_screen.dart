@@ -38,7 +38,7 @@ class ApplicationsForJobScreen extends ConsumerWidget {
           color: AppColors.textPrimary,
           onPressed: () => context.pop(),
         ),
-        title: const Text('Applications', style: AppTextStyles.heading2),
+        title: Text('Applications', style: AppTextStyles.heading2),
       ),
       body: SafeArea(
         child: Center(
@@ -162,7 +162,7 @@ class _EmptyState extends StatelessWidget {
               color: AppColors.textMuted,
             ),
             const SizedBox(height: AppSpacing.md),
-            const Text('No applications yet', style: AppTextStyles.heading2),
+            Text('No applications yet', style: AppTextStyles.heading2),
             const SizedBox(height: AppSpacing.xs),
             Text(
               'Workers applying to this job will appear here.',

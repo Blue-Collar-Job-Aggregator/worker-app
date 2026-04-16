@@ -97,7 +97,7 @@ class WorkerCard extends StatelessWidget {
                       color: AppColors.primary,
                     ),
                   ),
-                  const Text('/hr', style: AppTextStyles.small),
+                  Text('/hr', style: AppTextStyles.small),
                 ],
               ),
             ],

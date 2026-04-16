@@ -80,9 +80,9 @@ class _RoleSelectionScreenState extends ConsumerState<RoleSelectionScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: AppSpacing.sm),
-              const Text('How will you use Arohi?', style: AppTextStyles.heading1),
+              Text('How will you use Arohi?', style: AppTextStyles.heading1),
               const SizedBox(height: AppSpacing.sm),
-              const Text(
+              Text(
                 'Pick the role that fits you best. You can change this later.',
                 style: AppTextStyles.caption,
               ),

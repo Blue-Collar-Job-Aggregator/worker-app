@@ -73,7 +73,7 @@ class _PostJobScreenState extends ConsumerState<PostJobScreen> {
           color: AppColors.textPrimary,
           onPressed: () => context.pop(),
         ),
-        title: const Text('Post a new job', style: AppTextStyles.heading2),
+        title: Text('Post a new job', style: AppTextStyles.heading2),
       ),
       body: SafeArea(
         child: Center(
@@ -92,12 +92,12 @@ class _PostJobScreenState extends ConsumerState<PostJobScreen> {
                         AppSpacing.md,
                       ),
                       children: [
-                        const Text(
+                        Text(
                           'Tell workers what you need',
                           style: AppTextStyles.heading1,
                         ),
                         const SizedBox(height: AppSpacing.sm),
-                        const Text(
+                        Text(
                           'Clear titles and descriptions get 3x more applicants.',
                           style: AppTextStyles.caption,
                         ),

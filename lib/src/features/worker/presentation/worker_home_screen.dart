@@ -27,7 +27,7 @@ class WorkerHomeScreen extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Find Work', style: AppTextStyles.heading1),
+            Text('Find Work', style: AppTextStyles.heading1),
             const SizedBox(height: 2),
             Row(
               children: [
@@ -142,7 +142,7 @@ class _EmptyState extends StatelessWidget {
               color: AppColors.textMuted,
             ),
             const SizedBox(height: AppSpacing.md),
-            const Text('No matching jobs', style: AppTextStyles.heading2),
+            Text('No matching jobs', style: AppTextStyles.heading2),
             const SizedBox(height: AppSpacing.xs),
             Text(
               'Try a different keyword or clear the search.',

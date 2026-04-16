@@ -16,9 +16,13 @@ import '../features/jobs/presentation/job_list_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import '../features/region/presentation/region_screen.dart';
 import '../features/role/presentation/role_screen.dart';
+import '../features/onboarding/presentation/onboarding_screen.dart';
+import '../features/splash/presentation/splash_screen.dart';
 import '../features/worker/presentation/worker_home_screen.dart';
 
 abstract class AppRoutes {
+  static const splash = '/';
+  static const onboarding = '/onboarding';
   static const phone = '/phone';
   static const otp = '/otp';
   static const region = '/region';
@@ -46,11 +50,14 @@ abstract class AppRoutes {
 final goRouterProvider = Provider<GoRouter>((ref) {
   final notifier = _RouterRefresh(ref);
   return GoRouter(
-    initialLocation: AppRoutes.phone,
+    initialLocation: AppRoutes.splash,
     refreshListenable: notifier,
     redirect: (context, state) {
       final auth = ref.read(authControllerProvider);
       final loc = state.matchedLocation;
+
+      // Allow splash and onboarding screens to display without redirect
+      if (loc == AppRoutes.splash || loc == AppRoutes.onboarding) return null;
 
       switch (auth.status) {
         case AuthStatus.signedOut:
@@ -79,6 +86,14 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       }
     },
     routes: [
+      GoRoute(
+        path: AppRoutes.splash,
+        builder: (_, __) => const SplashScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.onboarding,
+        builder: (_, __) => const OnboardingScreen(),
+      ),
       GoRoute(
         path: AppRoutes.phone,
         builder: (_, __) => const PhoneInputScreen(),

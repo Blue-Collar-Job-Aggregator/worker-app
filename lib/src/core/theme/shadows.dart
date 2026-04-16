@@ -18,4 +18,20 @@ class AppShadows {
       offset: Offset(0, 2),
     ),
   ];
+
+  static const List<BoxShadow> elevated = [
+    BoxShadow(
+      color: Color(0x14000000),
+      blurRadius: 20,
+      offset: Offset(0, 8),
+    ),
+  ];
+
+  static const List<BoxShadow> button = [
+    BoxShadow(
+      color: Color(0x1A2563EB),
+      blurRadius: 12,
+      offset: Offset(0, 4),
+    ),
+  ];
 }

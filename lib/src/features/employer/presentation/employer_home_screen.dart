@@ -122,7 +122,7 @@ class _PostJobCta extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: AppSpacing.md),
-              const Expanded(
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -164,7 +164,7 @@ class _EmptyPostedState extends StatelessWidget {
               color: AppColors.textMuted,
             ),
             const SizedBox(height: AppSpacing.md),
-            const Text(
+            Text(
               "You haven't posted any jobs yet",
               style: AppTextStyles.heading2,
             ),
